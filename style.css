@@ -1,6 +1,11 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
+    background-image: url(popup-icons2/Light.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   *, *:before, *:after {
@@ -20,9 +25,6 @@ html {
 body {
     height: 100vh;
     
-    background: url(popup-icons2/Light.png) center no-repeat;
-    background-size: cover;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 img {
@@ -35,7 +37,6 @@ img {
     justify-content: flex-end;
     position: relative;
     align-items: center;
-    
     max-width: 1020px;
     height: 70px;
     margin: auto;
@@ -58,12 +59,12 @@ img {
     position: absolute;
 }
 
-.list {
+.list a{
     display: flex;
     align-items: center;
     padding: 0px 15px;
     height: 55px;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
     color: #242220;
     border-radius: 10px;
@@ -81,22 +82,28 @@ img {
     font-size: 20px;
 }
 
-.list:hover {
+.list a:hover {
     border-bottom: 3px solid rgb(61, 68, 71);
     background: rgba(230, 228, 227, 0.199);
-    
     border-radius: 10px;
+    font-size: 20px;
+    
 }
 
-.list:active,
-.list:checked,
-.list:focus  {
+
+.list a:focus  {
     background: rgba(241, 241, 241, 0.74);
-    
     border-radius: 10px;
+    border-bottom: 3px solid rgb(61, 68, 71);
+    
 }
 
-
+#checkbox_knopka:focus ~ div > ul > li > label > a {
+    background: rgba(241, 241, 241, 0.74);
+    border-radius: 10px;
+    border-bottom: 3px solid rgb(61, 68, 71);
+    
+}
 
 .conteiner__list-hiden {
     display: none;
@@ -114,6 +121,7 @@ img {
     border-radius: 28px;
     width: 320px;
     height: 310px;
+    
 }
 
 .conteiner {
@@ -146,33 +154,42 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    
-    font-weight: 800;
     text-align: center;
     z-index: 0;
     justify-items: center;
-    align-items: baseline;
+    align-items: end;
+    
 }
-
-
 
 .list-hiden {
-    display: flex;
-    width: 70px;
-    height: 70px;
-    align-items: flex-end;
-    text-align: center;
-    padding: 3px;
-    color: rgba(36, 34, 32, 0.56);
-    font-style: normal;
     
+    font-style: normal;
     font-size: 12px;
+    font-weight: 700;
     font-family: 'Lucida Sans Regular', sans-serif;
+    color: rgba(36, 34, 32, 0.432);
 }
 
-.list-hiden:hover {
+.list-hiden a{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    align-content: stretch;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    padding: 3px;
+   
+}
+
+.list-hiden a:hover {
     background: rgba(235, 235, 235, 0.329);
-    
+    border-radius: 12px;
+}
+
+.list-hiden a:focus {
+    background: rgba(179, 178, 178, 0.534);
     border-radius: 12px;
 }
 
@@ -189,11 +206,9 @@ img {
 }
 
 .checkbox_more-btn {
-   
     display: flex;
     height: 35px;
     cursor: pointer;
-    
     margin: 15px 30px 5px 30px;
     font-weight: 600;
     text-align: center;
@@ -204,6 +219,11 @@ img {
     border-radius: 12px;
     
 } 
+
+.checkbox_more-btn:hover {
+    background: linear-gradient(0deg, #e47719, #E68025), #b33022;
+    box-shadow: 0px 4px 24px rgba(204, 98, 6, 0.562);
+}
 
 #checkbox_knopka:checked ~ .conteiner__list-hiden {
     display: flex;
