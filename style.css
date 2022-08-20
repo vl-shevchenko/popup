@@ -59,6 +59,13 @@ img {
     position: absolute;
 }
 
+#checkbox_knopka:focus ~ div > ul > li > label > a {
+    background: rgba(241, 241, 241, 0.74);
+    border-radius: 10px;
+    border-bottom: 3px solid rgb(61, 68, 71);
+    
+}
+
 .list a{
     display: flex;
     align-items: center;
@@ -92,13 +99,6 @@ img {
 
 
 .list a:focus  {
-    background: rgba(241, 241, 241, 0.74);
-    border-radius: 10px;
-    border-bottom: 3px solid rgb(61, 68, 71);
-    
-}
-
-#checkbox_knopka:focus ~ div > ul > li > label > a {
     background: rgba(241, 241, 241, 0.74);
     border-radius: 10px;
     border-bottom: 3px solid rgb(61, 68, 71);
